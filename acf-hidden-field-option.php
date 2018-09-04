@@ -11,10 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 class acf_hide_field_option
 {
-	public function __construct()
-	{
-		$this->initialize();
-	}
+    public function __construct()
+    {
+        $this->initialize();
+    }
 
     public function initialize()
     {
@@ -22,8 +22,8 @@ class acf_hide_field_option
         add_filter('acf/prepare_field', [$this, 'prepare_field'], 10, 3);
     }
 
-	public function render_field_settings($field)
-	{
+    public function render_field_settings($field)
+    {
         acf_render_field_setting( $field, [
             'label'         => __('Hidden?'),
             'instructions'  => '',
@@ -31,7 +31,7 @@ class acf_hide_field_option
             'type'          => 'true_false',
             'ui'            => 1,
         ], true);   
-	}
+    }
 
     public function prepare_field($field)
     {
