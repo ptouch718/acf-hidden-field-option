@@ -9,6 +9,12 @@ Author URI: powell.may@gmail.com
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+namespace ptouch718\acf_hide_field_option;
+
+if( ! defined( 'ABSPATH' ) ) exit; 
+
+if( ! class_exists('acf_hide_field_option') ) :
+
 class acf_hide_field_option
 {
     public function __construct()
@@ -49,4 +55,7 @@ class acf_hide_field_option
         return $field;
     }
 }
+
 new acf_hide_field_option();
+
+ endif;
